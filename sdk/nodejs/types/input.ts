@@ -4,41 +4,43 @@
 import * as pulumi from "@pulumi/pulumi";
 import { input as inputs, output as outputs } from "../types";
 
-export interface KindClusterKindConfig {
-    apiVersion: pulumi.Input<string>;
-    containerdConfigPatches?: pulumi.Input<pulumi.Input<string>[]>;
-    kind: pulumi.Input<string>;
-    networking?: pulumi.Input<inputs.KindClusterKindConfigNetworking>;
-    nodes?: pulumi.Input<pulumi.Input<inputs.KindClusterKindConfigNode>[]>;
-}
+export namespace v1alpha4 {
+    export interface KindClusterKindConfig {
+        apiVersion: pulumi.Input<string>;
+        containerdConfigPatches?: pulumi.Input<pulumi.Input<string>[]>;
+        kind: pulumi.Input<string>;
+        networking?: pulumi.Input<inputs.v1alpha4.KindClusterKindConfigNetworking>;
+        nodes?: pulumi.Input<pulumi.Input<inputs.v1alpha4.KindClusterKindConfigNode>[]>;
+    }
 
-export interface KindClusterKindConfigNetworking {
-    apiServerAddress?: pulumi.Input<string>;
-    apiServerPort?: pulumi.Input<number>;
-    disableDefaultCni?: pulumi.Input<boolean>;
-    ipFamily?: pulumi.Input<string>;
-    kubeProxyMode?: pulumi.Input<string>;
-    podSubnet?: pulumi.Input<string>;
-    serviceSubnet?: pulumi.Input<string>;
-}
+    export interface KindClusterKindConfigNetworking {
+        apiServerAddress?: pulumi.Input<string>;
+        apiServerPort?: pulumi.Input<number>;
+        disableDefaultCni?: pulumi.Input<boolean>;
+        ipFamily?: pulumi.Input<string>;
+        kubeProxyMode?: pulumi.Input<string>;
+        podSubnet?: pulumi.Input<string>;
+        serviceSubnet?: pulumi.Input<string>;
+    }
 
-export interface KindClusterKindConfigNode {
-    extraMounts?: pulumi.Input<pulumi.Input<inputs.KindClusterKindConfigNodeExtraMount>[]>;
-    extraPortMappings?: pulumi.Input<pulumi.Input<inputs.KindClusterKindConfigNodeExtraPortMapping>[]>;
-    image?: pulumi.Input<string>;
-    kubeadmConfigPatches?: pulumi.Input<pulumi.Input<string>[]>;
-    labels?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
-    role?: pulumi.Input<string>;
-}
+    export interface KindClusterKindConfigNode {
+        extraMounts?: pulumi.Input<pulumi.Input<inputs.v1alpha4.KindClusterKindConfigNodeExtraMount>[]>;
+        extraPortMappings?: pulumi.Input<pulumi.Input<inputs.v1alpha4.KindClusterKindConfigNodeExtraPortMapping>[]>;
+        image?: pulumi.Input<string>;
+        kubeadmConfigPatches?: pulumi.Input<pulumi.Input<string>[]>;
+        labels?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+        role?: pulumi.Input<string>;
+    }
 
-export interface KindClusterKindConfigNodeExtraMount {
-    containerPath?: pulumi.Input<string>;
-    hostPath?: pulumi.Input<string>;
-}
+    export interface KindClusterKindConfigNodeExtraMount {
+        containerPath?: pulumi.Input<string>;
+        hostPath?: pulumi.Input<string>;
+    }
 
-export interface KindClusterKindConfigNodeExtraPortMapping {
-    containerPort?: pulumi.Input<number>;
-    hostPort?: pulumi.Input<number>;
-    listenAddress?: pulumi.Input<string>;
-    protocol?: pulumi.Input<string>;
+    export interface KindClusterKindConfigNodeExtraPortMapping {
+        containerPort?: pulumi.Input<number>;
+        hostPort?: pulumi.Input<number>;
+        listenAddress?: pulumi.Input<string>;
+        protocol?: pulumi.Input<string>;
+    }
 }

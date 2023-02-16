@@ -2,8 +2,8 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 import * as pulumi from "@pulumi/pulumi";
-import { input as inputs, output as outputs } from "./types";
-import * as utilities from "./utilities";
+import { input as inputs, output as outputs } from "../types";
+import * as utilities from "../utilities";
 
 export class KindCluster extends pulumi.CustomResource {
     /**
@@ -20,7 +20,7 @@ export class KindCluster extends pulumi.CustomResource {
     }
 
     /** @internal */
-    public static readonly __pulumiType = 'kind:index/kindCluster:KindCluster';
+    public static readonly __pulumiType = 'kind:v1alpha4/kindCluster:KindCluster';
 
     /**
      * Returns true if the given object is an instance of KindCluster.  This is designed to work even
@@ -56,7 +56,7 @@ export class KindCluster extends pulumi.CustomResource {
     /**
      * The kind_config that kind will use to bootstrap the cluster.
      */
-    public readonly kindConfig!: pulumi.Output<outputs.KindClusterKindConfig | undefined>;
+    public readonly kindConfig!: pulumi.Output<outputs.v1alpha4.KindClusterKindConfig | undefined>;
     /**
      * Kubeconfig set after the the cluster is created.
      */
@@ -148,7 +148,7 @@ export interface KindClusterState {
     /**
      * The kind_config that kind will use to bootstrap the cluster.
      */
-    kindConfig?: pulumi.Input<inputs.KindClusterKindConfig>;
+    kindConfig?: pulumi.Input<inputs.v1alpha4.KindClusterKindConfig>;
     /**
      * Kubeconfig set after the the cluster is created.
      */
@@ -178,7 +178,7 @@ export interface KindClusterArgs {
     /**
      * The kind_config that kind will use to bootstrap the cluster.
      */
-    kindConfig?: pulumi.Input<inputs.KindClusterKindConfig>;
+    kindConfig?: pulumi.Input<inputs.v1alpha4.KindClusterKindConfig>;
     /**
      * Kubeconfig path set after the the cluster is created or by the user to override defaults.
      */

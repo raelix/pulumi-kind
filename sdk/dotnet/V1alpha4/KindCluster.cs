@@ -7,9 +7,9 @@ using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
 
-namespace Pulumi.Kind
+namespace Pulumi.Kind.V1alpha4
 {
-    [KindResourceType("kind:index/kindCluster:KindCluster")]
+    [KindResourceType("kind:v1alpha4/kindCluster:KindCluster")]
     public partial class KindCluster : global::Pulumi.CustomResource
     {
         /// <summary>
@@ -87,12 +87,12 @@ namespace Pulumi.Kind
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
         public KindCluster(string name, KindClusterArgs? args = null, CustomResourceOptions? options = null)
-            : base("kind:index/kindCluster:KindCluster", name, args ?? new KindClusterArgs(), MakeResourceOptions(options, ""))
+            : base("kind:v1alpha4/kindCluster:KindCluster", name, args ?? new KindClusterArgs(), MakeResourceOptions(options, ""))
         {
         }
 
         private KindCluster(string name, Input<string> id, KindClusterState? state = null, CustomResourceOptions? options = null)
-            : base("kind:index/kindCluster:KindCluster", name, state, MakeResourceOptions(options, id))
+            : base("kind:v1alpha4/kindCluster:KindCluster", name, state, MakeResourceOptions(options, id))
         {
         }
 

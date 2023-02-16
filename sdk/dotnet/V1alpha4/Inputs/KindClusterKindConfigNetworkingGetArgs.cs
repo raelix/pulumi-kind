@@ -7,10 +7,10 @@ using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
 
-namespace Pulumi.Kind.Inputs
+namespace Pulumi.Kind.V1alpha4.Inputs
 {
 
-    public sealed class KindClusterKindConfigNetworkingArgs : global::Pulumi.ResourceArgs
+    public sealed class KindClusterKindConfigNetworkingGetArgs : global::Pulumi.ResourceArgs
     {
         [Input("apiServerAddress")]
         public Input<string>? ApiServerAddress { get; set; }
@@ -33,9 +33,9 @@ namespace Pulumi.Kind.Inputs
         [Input("serviceSubnet")]
         public Input<string>? ServiceSubnet { get; set; }
 
-        public KindClusterKindConfigNetworkingArgs()
+        public KindClusterKindConfigNetworkingGetArgs()
         {
         }
-        public static new KindClusterKindConfigNetworkingArgs Empty => new KindClusterKindConfigNetworkingArgs();
+        public static new KindClusterKindConfigNetworkingGetArgs Empty => new KindClusterKindConfigNetworkingGetArgs();
     }
 }

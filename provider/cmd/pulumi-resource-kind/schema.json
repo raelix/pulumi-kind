@@ -1,5 +1,6 @@
 {
     "name": "kind",
+    "displayName": "Kind",
     "description": "A Pulumi package for creating and managing kind cloud resources.",
     "keywords": [
         "pulumi",
@@ -9,8 +10,8 @@
     "homepage": "https://www.pulumi.com",
     "license": "Apache-2.0",
     "attribution": "This Pulumi package is based on the [`kind` Terraform Provider](https://github.com/terraform-providers/terraform-provider-kind).",
-    "repository": "https://github.com/pulumi/pulumi-kind",
-    "publisher": "Pulumi",
+    "repository": "https://github.com/raelix/pulumi-kind",
+    "publisher": "raelix",
     "meta": {
         "moduleFormat": "(.*)(?:/[^/]*)"
     },
@@ -39,12 +40,12 @@
             "disableUnionOutputTypes": true,
             "packageDescription": "A Pulumi package for creating and managing kind cloud resources.",
             "packageName": "",
-            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-kind)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-kind` repo](https://github.com/pulumi/pulumi-kind/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-kind` repo](https://github.com/terraform-providers/terraform-provider-kind/issues).",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-kind)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-kind` repo](https://github.com/raelix/pulumi-kind/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-kind` repo](https://github.com/terraform-providers/terraform-provider-kind/issues).",
             "typescriptVersion": ""
         },
         "python": {
             "compatibility": "tfbridge20",
-            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-kind)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-kind` repo](https://github.com/pulumi/pulumi-kind/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-kind` repo](https://github.com/terraform-providers/terraform-provider-kind/issues).",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-kind)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-kind` repo](https://github.com/raelix/pulumi-kind/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-kind` repo](https://github.com/terraform-providers/terraform-provider-kind/issues).",
             "requires": {
                 "pulumi": "\u003e=3.0.0,\u003c4.0.0"
             }
@@ -52,7 +53,7 @@
     },
     "config": {},
     "types": {
-        "kind:index/KindClusterKindConfig:KindClusterKindConfig": {
+        "kind:v1alpha4/KindClusterKindConfig:KindClusterKindConfig": {
             "properties": {
                 "apiVersion": {
                     "type": "string",
@@ -85,7 +86,7 @@
                     "willReplaceOnChanges": true
                 },
                 "networking": {
-                    "$ref": "#/types/kind:index/KindClusterKindConfigNetworking:KindClusterKindConfigNetworking",
+                    "$ref": "#/types/kind:v1alpha4/KindClusterKindConfigNetworking:KindClusterKindConfigNetworking",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -96,7 +97,7 @@
                 "nodes": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/types/kind:index/KindClusterKindConfigNode:KindClusterKindConfigNode"
+                        "$ref": "#/types/kind:v1alpha4/KindClusterKindConfigNode:KindClusterKindConfigNode"
                     },
                     "language": {
                         "python": {
@@ -112,7 +113,7 @@
                 "kind"
             ]
         },
-        "kind:index/KindClusterKindConfigNetworking:KindClusterKindConfigNetworking": {
+        "kind:v1alpha4/KindClusterKindConfigNetworking:KindClusterKindConfigNetworking": {
             "properties": {
                 "apiServerAddress": {
                     "type": "string",
@@ -180,12 +181,12 @@
             },
             "type": "object"
         },
-        "kind:index/KindClusterKindConfigNode:KindClusterKindConfigNode": {
+        "kind:v1alpha4/KindClusterKindConfigNode:KindClusterKindConfigNode": {
             "properties": {
                 "extraMounts": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/types/kind:index/KindClusterKindConfigNodeExtraMount:KindClusterKindConfigNodeExtraMount"
+                        "$ref": "#/types/kind:v1alpha4/KindClusterKindConfigNodeExtraMount:KindClusterKindConfigNodeExtraMount"
                     },
                     "language": {
                         "python": {
@@ -197,7 +198,7 @@
                 "extraPortMappings": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/types/kind:index/KindClusterKindConfigNodeExtraPortMapping:KindClusterKindConfigNodeExtraPortMapping"
+                        "$ref": "#/types/kind:v1alpha4/KindClusterKindConfigNodeExtraPortMapping:KindClusterKindConfigNodeExtraPortMapping"
                     },
                     "language": {
                         "python": {
@@ -251,7 +252,7 @@
             },
             "type": "object"
         },
-        "kind:index/KindClusterKindConfigNodeExtraMount:KindClusterKindConfigNodeExtraMount": {
+        "kind:v1alpha4/KindClusterKindConfigNodeExtraMount:KindClusterKindConfigNodeExtraMount": {
             "properties": {
                 "containerPath": {
                     "type": "string",
@@ -274,7 +275,7 @@
             },
             "type": "object"
         },
-        "kind:index/KindClusterKindConfigNodeExtraPortMapping:KindClusterKindConfigNodeExtraPortMapping": {
+        "kind:v1alpha4/KindClusterKindConfigNodeExtraPortMapping:KindClusterKindConfigNodeExtraPortMapping": {
             "properties": {
                 "containerPort": {
                     "type": "integer",
@@ -320,7 +321,7 @@
         "description": "The provider type for the kind package. By default, resources use package-wide configuration\nsettings, however an explicit `Provider` instance may be created and passed during resource\nconstruction to achieve fine-grained programmatic control over provider settings. See the\n[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.\n"
     },
     "resources": {
-        "kind:index/kindCluster:KindCluster": {
+        "kind:v1alpha4/kindCluster:KindCluster": {
             "properties": {
                 "clientCertificate": {
                     "type": "string",
@@ -343,7 +344,7 @@
                     "description": "Kubernetes APIServer endpoint.\n"
                 },
                 "kindConfig": {
-                    "$ref": "#/types/kind:index/KindClusterKindConfig:KindClusterKindConfig",
+                    "$ref": "#/types/kind:v1alpha4/KindClusterKindConfig:KindClusterKindConfig",
                     "description": "The kind_config that kind will use to bootstrap the cluster.\n"
                 },
                 "kubeconfig": {
@@ -380,7 +381,7 @@
             ],
             "inputProperties": {
                 "kindConfig": {
-                    "$ref": "#/types/kind:index/KindClusterKindConfig:KindClusterKindConfig",
+                    "$ref": "#/types/kind:v1alpha4/KindClusterKindConfig:KindClusterKindConfig",
                     "description": "The kind_config that kind will use to bootstrap the cluster.\n",
                     "willReplaceOnChanges": true
                 },
@@ -429,7 +430,7 @@
                         "description": "Kubernetes APIServer endpoint.\n"
                     },
                     "kindConfig": {
-                        "$ref": "#/types/kind:index/KindClusterKindConfig:KindClusterKindConfig",
+                        "$ref": "#/types/kind:v1alpha4/KindClusterKindConfig:KindClusterKindConfig",
                         "description": "The kind_config that kind will use to bootstrap the cluster.\n",
                         "willReplaceOnChanges": true
                     },

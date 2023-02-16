@@ -4,42 +4,44 @@
 import * as pulumi from "@pulumi/pulumi";
 import { input as inputs, output as outputs } from "../types";
 
-export interface KindClusterKindConfig {
-    apiVersion: string;
-    containerdConfigPatches?: string[];
-    kind: string;
-    networking?: outputs.KindClusterKindConfigNetworking;
-    nodes?: outputs.KindClusterKindConfigNode[];
-}
+export namespace v1alpha4 {
+    export interface KindClusterKindConfig {
+        apiVersion: string;
+        containerdConfigPatches?: string[];
+        kind: string;
+        networking?: outputs.v1alpha4.KindClusterKindConfigNetworking;
+        nodes?: outputs.v1alpha4.KindClusterKindConfigNode[];
+    }
 
-export interface KindClusterKindConfigNetworking {
-    apiServerAddress?: string;
-    apiServerPort?: number;
-    disableDefaultCni?: boolean;
-    ipFamily?: string;
-    kubeProxyMode?: string;
-    podSubnet?: string;
-    serviceSubnet?: string;
-}
+    export interface KindClusterKindConfigNetworking {
+        apiServerAddress?: string;
+        apiServerPort?: number;
+        disableDefaultCni?: boolean;
+        ipFamily?: string;
+        kubeProxyMode?: string;
+        podSubnet?: string;
+        serviceSubnet?: string;
+    }
 
-export interface KindClusterKindConfigNode {
-    extraMounts?: outputs.KindClusterKindConfigNodeExtraMount[];
-    extraPortMappings?: outputs.KindClusterKindConfigNodeExtraPortMapping[];
-    image?: string;
-    kubeadmConfigPatches?: string[];
-    labels?: {[key: string]: string};
-    role?: string;
-}
+    export interface KindClusterKindConfigNode {
+        extraMounts?: outputs.v1alpha4.KindClusterKindConfigNodeExtraMount[];
+        extraPortMappings?: outputs.v1alpha4.KindClusterKindConfigNodeExtraPortMapping[];
+        image?: string;
+        kubeadmConfigPatches?: string[];
+        labels?: {[key: string]: string};
+        role?: string;
+    }
 
-export interface KindClusterKindConfigNodeExtraMount {
-    containerPath?: string;
-    hostPath?: string;
-}
+    export interface KindClusterKindConfigNodeExtraMount {
+        containerPath?: string;
+        hostPath?: string;
+    }
 
-export interface KindClusterKindConfigNodeExtraPortMapping {
-    containerPort?: number;
-    hostPort?: number;
-    listenAddress?: string;
-    protocol?: string;
-}
+    export interface KindClusterKindConfigNodeExtraPortMapping {
+        containerPort?: number;
+        hostPort?: number;
+        listenAddress?: string;
+        protocol?: string;
+    }
 
+}

@@ -7,7 +7,7 @@ using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
 
-namespace Pulumi.Kind.Outputs
+namespace Pulumi.Kind.V1alpha4.Outputs
 {
 
     [OutputType]

@@ -5,31 +5,16 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 // Export members:
-export * from "./kindCluster";
 export * from "./provider";
 
 // Export sub-modules:
 import * as types from "./types";
+import * as v1alpha4 from "./v1alpha4";
 
 export {
     types,
+    v1alpha4,
 };
-
-// Import resources to register:
-import { KindCluster } from "./kindCluster";
-
-const _module = {
-    version: utilities.getVersion(),
-    construct: (name: string, type: string, urn: string): pulumi.Resource => {
-        switch (type) {
-            case "kind:index/kindCluster:KindCluster":
-                return new KindCluster(name, <any>undefined, { urn })
-            default:
-                throw new Error(`unknown resource type ${type}`);
-        }
-    },
-};
-pulumi.runtime.registerResourceModule("kind", "index/kindCluster", _module)
 
 import { Provider } from "./provider";
 

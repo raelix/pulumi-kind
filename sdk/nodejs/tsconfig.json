@@ -14,11 +14,12 @@
     },
     "files": [
         "index.ts",
-        "kindCluster.ts",
         "provider.ts",
         "types/index.ts",
         "types/input.ts",
         "types/output.ts",
-        "utilities.ts"
+        "utilities.ts",
+        "v1alpha4/index.ts",
+        "v1alpha4/kindCluster.ts"
     ]
 }
