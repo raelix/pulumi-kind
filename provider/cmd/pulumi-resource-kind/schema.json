@@ -53,7 +53,7 @@
     },
     "config": {},
     "types": {
-        "kind:v1alpha4/KindClusterKindConfig:KindClusterKindConfig": {
+        "kind:index/KindClusterKindConfig:KindClusterKindConfig": {
             "properties": {
                 "apiVersion": {
                     "type": "string",
@@ -86,7 +86,7 @@
                     "willReplaceOnChanges": true
                 },
                 "networking": {
-                    "$ref": "#/types/kind:v1alpha4/KindClusterKindConfigNetworking:KindClusterKindConfigNetworking",
+                    "$ref": "#/types/kind:index/KindClusterKindConfigNetworking:KindClusterKindConfigNetworking",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -97,7 +97,7 @@
                 "nodes": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/types/kind:v1alpha4/KindClusterKindConfigNode:KindClusterKindConfigNode"
+                        "$ref": "#/types/kind:index/KindClusterKindConfigNode:KindClusterKindConfigNode"
                     },
                     "language": {
                         "python": {
@@ -113,7 +113,7 @@
                 "kind"
             ]
         },
-        "kind:v1alpha4/KindClusterKindConfigNetworking:KindClusterKindConfigNetworking": {
+        "kind:index/KindClusterKindConfigNetworking:KindClusterKindConfigNetworking": {
             "properties": {
                 "apiServerAddress": {
                     "type": "string",
@@ -181,12 +181,12 @@
             },
             "type": "object"
         },
-        "kind:v1alpha4/KindClusterKindConfigNode:KindClusterKindConfigNode": {
+        "kind:index/KindClusterKindConfigNode:KindClusterKindConfigNode": {
             "properties": {
                 "extraMounts": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/types/kind:v1alpha4/KindClusterKindConfigNodeExtraMount:KindClusterKindConfigNodeExtraMount"
+                        "$ref": "#/types/kind:index/KindClusterKindConfigNodeExtraMount:KindClusterKindConfigNodeExtraMount"
                     },
                     "language": {
                         "python": {
@@ -198,7 +198,7 @@
                 "extraPortMappings": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/types/kind:v1alpha4/KindClusterKindConfigNodeExtraPortMapping:KindClusterKindConfigNodeExtraPortMapping"
+                        "$ref": "#/types/kind:index/KindClusterKindConfigNodeExtraPortMapping:KindClusterKindConfigNodeExtraPortMapping"
                     },
                     "language": {
                         "python": {
@@ -252,7 +252,7 @@
             },
             "type": "object"
         },
-        "kind:v1alpha4/KindClusterKindConfigNodeExtraMount:KindClusterKindConfigNodeExtraMount": {
+        "kind:index/KindClusterKindConfigNodeExtraMount:KindClusterKindConfigNodeExtraMount": {
             "properties": {
                 "containerPath": {
                     "type": "string",
@@ -275,7 +275,7 @@
             },
             "type": "object"
         },
-        "kind:v1alpha4/KindClusterKindConfigNodeExtraPortMapping:KindClusterKindConfigNodeExtraPortMapping": {
+        "kind:index/KindClusterKindConfigNodeExtraPortMapping:KindClusterKindConfigNodeExtraPortMapping": {
             "properties": {
                 "containerPort": {
                     "type": "integer",
@@ -321,7 +321,7 @@
         "description": "The provider type for the kind package. By default, resources use package-wide configuration\nsettings, however an explicit `Provider` instance may be created and passed during resource\nconstruction to achieve fine-grained programmatic control over provider settings. See the\n[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.\n"
     },
     "resources": {
-        "kind:v1alpha4/kindCluster:KindCluster": {
+        "kind:index/kindCluster:KindCluster": {
             "properties": {
                 "clientCertificate": {
                     "type": "string",
@@ -344,7 +344,7 @@
                     "description": "Kubernetes APIServer endpoint.\n"
                 },
                 "kindConfig": {
-                    "$ref": "#/types/kind:v1alpha4/KindClusterKindConfig:KindClusterKindConfig",
+                    "$ref": "#/types/kind:index/KindClusterKindConfig:KindClusterKindConfig",
                     "description": "The kind_config that kind will use to bootstrap the cluster.\n"
                 },
                 "kubeconfig": {
@@ -381,7 +381,7 @@
             ],
             "inputProperties": {
                 "kindConfig": {
-                    "$ref": "#/types/kind:v1alpha4/KindClusterKindConfig:KindClusterKindConfig",
+                    "$ref": "#/types/kind:index/KindClusterKindConfig:KindClusterKindConfig",
                     "description": "The kind_config that kind will use to bootstrap the cluster.\n",
                     "willReplaceOnChanges": true
                 },
@@ -430,7 +430,7 @@
                         "description": "Kubernetes APIServer endpoint.\n"
                     },
                     "kindConfig": {
-                        "$ref": "#/types/kind:v1alpha4/KindClusterKindConfig:KindClusterKindConfig",
+                        "$ref": "#/types/kind:index/KindClusterKindConfig:KindClusterKindConfig",
                         "description": "The kind_config that kind will use to bootstrap the cluster.\n",
                         "willReplaceOnChanges": true
                     },

@@ -7,7 +7,7 @@ using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
 
-namespace Pulumi.Kind.V1alpha4.Inputs
+namespace Pulumi.Kind.Inputs
 {
 
     public sealed class KindClusterKindConfigNodeExtraPortMappingArgs : global::Pulumi.ResourceArgs

@@ -32,7 +32,7 @@ const (
 	// registries for nodejs and python:
 	mainPkg = "kind"
 	// modules:
-	mainMod = "v1alpha4" // the kind module
+	mainMod = "index" // the kind module
 )
 
 // preConfigureCallback is called before the providerConfigure function of the underlying provider.

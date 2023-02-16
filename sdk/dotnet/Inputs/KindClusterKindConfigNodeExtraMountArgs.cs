@@ -7,10 +7,10 @@ using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
 
-namespace Pulumi.Kind.V1alpha4.Inputs
+namespace Pulumi.Kind.Inputs
 {
 
-    public sealed class KindClusterKindConfigNodeExtraMountGetArgs : global::Pulumi.ResourceArgs
+    public sealed class KindClusterKindConfigNodeExtraMountArgs : global::Pulumi.ResourceArgs
     {
         [Input("containerPath")]
         public Input<string>? ContainerPath { get; set; }
@@ -18,9 +18,9 @@ namespace Pulumi.Kind.V1alpha4.Inputs
         [Input("hostPath")]
         public Input<string>? HostPath { get; set; }
 
-        public KindClusterKindConfigNodeExtraMountGetArgs()
+        public KindClusterKindConfigNodeExtraMountArgs()
         {
         }
-        public static new KindClusterKindConfigNodeExtraMountGetArgs Empty => new KindClusterKindConfigNodeExtraMountGetArgs();
+        public static new KindClusterKindConfigNodeExtraMountArgs Empty => new KindClusterKindConfigNodeExtraMountArgs();
     }
 }

@@ -7,7 +7,7 @@ import warnings
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
-from .. import _utilities
+from . import _utilities
 from . import outputs
 from ._inputs import *
 
@@ -355,7 +355,7 @@ class KindCluster(pulumi.CustomResource):
             __props__.__dict__["endpoint"] = None
             __props__.__dict__["kubeconfig"] = None
         super(KindCluster, __self__).__init__(
-            'kind:v1alpha4/kindCluster:KindCluster',
+            'kind:index/kindCluster:KindCluster',
             resource_name,
             __props__,
             opts)

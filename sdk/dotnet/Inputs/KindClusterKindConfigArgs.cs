@@ -7,10 +7,10 @@ using System.Collections.Immutable;
 using System.Threading.Tasks;
 using Pulumi.Serialization;
 
-namespace Pulumi.Kind.V1alpha4.Inputs
+namespace Pulumi.Kind.Inputs
 {
 
-    public sealed class KindClusterKindConfigGetArgs : global::Pulumi.ResourceArgs
+    public sealed class KindClusterKindConfigArgs : global::Pulumi.ResourceArgs
     {
         [Input("apiVersion", required: true)]
         public Input<string> ApiVersion { get; set; } = null!;
@@ -27,19 +27,19 @@ namespace Pulumi.Kind.V1alpha4.Inputs
         public Input<string> Kind { get; set; } = null!;
 
         [Input("networking")]
-        public Input<Inputs.KindClusterKindConfigNetworkingGetArgs>? Networking { get; set; }
+        public Input<Inputs.KindClusterKindConfigNetworkingArgs>? Networking { get; set; }
 
         [Input("nodes")]
-        private InputList<Inputs.KindClusterKindConfigNodeGetArgs>? _nodes;
-        public InputList<Inputs.KindClusterKindConfigNodeGetArgs> Nodes
+        private InputList<Inputs.KindClusterKindConfigNodeArgs>? _nodes;
+        public InputList<Inputs.KindClusterKindConfigNodeArgs> Nodes
         {
-            get => _nodes ?? (_nodes = new InputList<Inputs.KindClusterKindConfigNodeGetArgs>());
+            get => _nodes ?? (_nodes = new InputList<Inputs.KindClusterKindConfigNodeArgs>());
             set => _nodes = value;
         }
 
-        public KindClusterKindConfigGetArgs()
+        public KindClusterKindConfigArgs()
         {
         }
-        public static new KindClusterKindConfigGetArgs Empty => new KindClusterKindConfigGetArgs();
+        public static new KindClusterKindConfigArgs Empty => new KindClusterKindConfigArgs();
     }
 }

@@ -5,24 +5,19 @@
 from . import _utilities
 import typing
 # Export this package's modules as members:
+from .kind_cluster import *
 from .provider import *
-
-# Make subpackages available:
-if typing.TYPE_CHECKING:
-    import pulumi_kind.v1alpha4 as __v1alpha4
-    v1alpha4 = __v1alpha4
-else:
-    v1alpha4 = _utilities.lazy_import('pulumi_kind.v1alpha4')
-
+from ._inputs import *
+from . import outputs
 _utilities.register(
     resource_modules="""
 [
  {
   "pkg": "kind",
-  "mod": "v1alpha4/kindCluster",
-  "fqn": "pulumi_kind.v1alpha4",
+  "mod": "index/kindCluster",
+  "fqn": "pulumi_kind",
   "classes": {
-   "kind:v1alpha4/kindCluster:KindCluster": "KindCluster"
+   "kind:index/kindCluster:KindCluster": "KindCluster"
   }
  }
 ]
