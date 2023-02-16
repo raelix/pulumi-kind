@@ -5,6 +5,11 @@ The kind Resource Provider lets you manage [kind](https://kind.sigs.k8s.io/) res
 It is based on the Kind Terraform Provider.
 
 ## Installing
+Install the plugin with ```pulumi``` cli
+```shell
+pulumi plugin install resource kind v0.0.1 --server "github://api.github.com/raelix"
+```
+> Remember to replace the 'v0.0.1' with the right version
 
 This package is available for several languages/platforms:
 
